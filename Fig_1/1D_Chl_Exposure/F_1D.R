@@ -28,11 +28,11 @@ Lineas1 <- geom_line(size = 0.5)
 Lineas2 <- geom_line(data=subset(dataplot, Replicate == '2' & Antibiotic == 'Chl'), size = 0.5, alpha= 0.8)
 Lineas3 <- geom_line(data=subset(dataplot, Replicate == '3' & Antibiotic == 'Chl'), size = 0.5, alpha= 0.6)
 
-#for upper plot
+#make upper panel
 ploti <- plotReads +  background  + Lineas1 + Lineas2 + Lineas3 +xaxe + yaxe + titulo + yscale + scale + couleur 
 ploti
-
-pdf(paste("AntibioticExposure_InitiallyCa-dominated.pdf"), width=6, height=4)
+#export it
+pdf(paste("F_1D_top.pdf"), width=6, height=4)
 print(ploti)
 dev.off()
 
@@ -59,10 +59,10 @@ Lineas1 <- geom_line(size = 0.5)
 Lineas2 <- geom_line(data=subset(dataplot, Replicate == '2' & Antibiotic == 'Chl'), size = 0.5, alpha= 0.8)
 Lineas3 <- geom_line(data=subset(dataplot, Replicate == '3' & Antibiotic == 'Chl'), size = 0.5, alpha= 0.6)
 
-#for upper plot
+#make bottom panel
 ploti <- plotReads +  background  + Lineas1 + Lineas2 + Lineas3 +xaxe + yaxe + titulo + yscale + scale + couleur 
 ploti
-
-pdf(paste("AntibioticExposure_InitiallyLp-dominated.pdf"), width=6, height=4)
+#export it
+pdf(paste("F_1D_bottom.pdf"), width=6, height=4)
 print(ploti)
 dev.off()
