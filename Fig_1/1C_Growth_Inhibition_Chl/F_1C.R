@@ -26,7 +26,7 @@ G1 <- G1[,2:ncol(G1)]
 G1 <- as.data.frame(t(G1))  #t(G1) returns a matrix, which has only 1 data type
                             #as.data.frame allows to include multiple data types
 G1 <- unfactor(G1) #avoids treating any variable under the data type 'factor'
-G1[,3:ncol(G1)] <- lapply(G1[,3:ncol(G1)],as.numeric)#change data type from factor to numeric
+G1[,3:ncol(G1)] <- lapply(G1[,3:ncol(G1)],as.numeric)#convert data to 'numeric' type
 typeof(G1[2,3]) #to check that elements are actually numeric
 G1[3] <- G1[3] / 3600 # change time from seconds to hours
 G1[,4:ncol(G1)] <- G1[,4:ncol(G1)] - 0.091 #correct for background OD
