@@ -1,0 +1,1 @@
+Figure S6 was created using the same code as in Fig. 2 after changing the parameter values according to the ones specified in Fig S6 caption. 
